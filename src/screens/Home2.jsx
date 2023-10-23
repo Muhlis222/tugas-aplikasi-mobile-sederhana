@@ -118,8 +118,8 @@ class Home2 extends Component {
 
 
                 
-                <TouchableOpacity style={{ justifyContent: 'center', alignItems: 'flex-end' }} onPress={() => this.props.navigation.goBack()}>
-                    <Text style={{ fontSize: 15, fontWeight: "bold", marginBottom: 20, margin: 15 }}>Move To Halaman 1</Text>
+                <TouchableOpacity style={{ justifyContent: 'center', alignItems: 'flex-end' }} onPress={() => this.props.navigation.navigate('About')}>
+                    <Text style={{ fontSize: 15, fontWeight: "bold", marginBottom: 20, margin: 15 }}>Move To About</Text>
                 </TouchableOpacity>
             </View>
         );
