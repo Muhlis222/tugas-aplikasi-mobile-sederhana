@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StatusBar, Image, TouchableOpacity, ImageBackground,ScrollView, FlatList } from "react-native";
+import { View, Text, StatusBar, Image, TouchableOpacity, ImageBackground, ScrollView, FlatList } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 
@@ -7,7 +7,7 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data : [
+            data: [
                 { id: '1', image: require('../image/logo.jpg') },
                 { id: '2', image: require('../image/logo.jpg') },
                 { id: '3', image: require('../image/logo.jpg') },
@@ -19,31 +19,31 @@ class Home extends Component {
     render() {
         return (
             <ScrollView style={{ flex: 1, backgroundColor: '#ededec' }}>
-                <StatusBar backgroundColor= '#ededec' barStyle= 'dark-content' />
-                <View style={{ marginTop: 30, marginHorizontal: 20, flexDirection: 'row'}}>
+                <StatusBar backgroundColor='#ededec' barStyle='dark-content' />
+                <View style={{ marginTop: 30, marginHorizontal: 20, flexDirection: 'row' }}>
                     <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'flex-start' }}>
-                        <Icon name="bars" size={30} color="#838e99"/>
+                        <Icon name="bars" size={30} color="#838e99" />
                     </TouchableOpacity>
 
                     <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'flex-end' }}>
-                        <Image style= {{width: 50, height: 50, borderRadius: 50}} source={require('../image/user.png')}/>
+                        <Image style={{ width: 50, height: 50, borderRadius: 50 }} source={require('../image/user.png')} />
                     </TouchableOpacity>
                 </View>
-                <View style={{ marginHorizontal: 20, marginTop: 30, flex: 1}}>
+                <View style={{ marginHorizontal: 20, marginTop: 30, flex: 1 }}>
                     <Text style={{ fontSize: 28 }}>Welcome Halaman 1,</Text>
                     <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#4a90e2' }}>Moh Muhlis</Text>
 
                     <View>
-                        <Text style= {{ fontSize: 20, fontWeight: 'bold', marginTop: 30, marginBottom: 20 }}>Batik</Text>
+                        <Text style={{ fontSize: 20, fontWeight: 'bold', marginTop: 30, marginBottom: 20 }}>Batik</Text>
 
                         <FlatList
                             data={this.state.data}
                             renderItem={this.renderItem}
                             keyExtractor={(item) => item.id}
                             horizontal={true}
-                            renderItem = {({item}) => (
-                                <TouchableOpacity 
-                                    style= {{ 
+                            renderItem={({ item }) => (
+                                <TouchableOpacity
+                                    style={{
                                         backgroundColor: '#ffff',
                                         justifyContent: 'center',
                                         alignItems: 'center',
@@ -52,8 +52,8 @@ class Home extends Component {
                                         borderRadius: 10
                                     }}>
                                     <Image style={{ width: 250, height: 210, borderRadius: 10 }} source={item.image} />
-                                    <View 
-                                        style={{ 
+                                    <View
+                                        style={{
                                             position: 'absolute',
                                             bottom: 10,
                                             backgroundColor: 'rgba(0, 0, 0, 0.7)',
@@ -61,8 +61,8 @@ class Home extends Component {
                                             paddingHorizontal: 10,
                                             borderRadius: 5,
                                         }}>
-                                        <Text 
-                                            style={{ 
+                                        <Text
+                                            style={{
                                                 color: '#fff',
                                                 fontSize: 16,
                                                 fontWeight: 'bold',
@@ -77,16 +77,16 @@ class Home extends Component {
                     </View>
 
                     <View>
-                        <Text style= {{ fontSize: 20, fontWeight: 'bold', marginTop: 30, marginBottom: 20 }}>Batik</Text>
+                        <Text style={{ fontSize: 20, fontWeight: 'bold', marginTop: 30, marginBottom: 20 }}>Batik</Text>
 
                         <FlatList
                             data={this.state.data}
                             renderItem={this.renderItem}
                             keyExtractor={(item) => item.id}
                             horizontal={true}
-                            renderItem = {({item}) => (
-                                <TouchableOpacity 
-                                    style= {{ 
+                            renderItem={({ item }) => (
+                                <TouchableOpacity
+                                    style={{
                                         backgroundColor: '#ffff',
                                         justifyContent: 'center',
                                         alignItems: 'center',
@@ -95,8 +95,8 @@ class Home extends Component {
                                         borderRadius: 10
                                     }}>
                                     <Image style={{ width: 200, height: 200, borderRadius: 10 }} resizeMode="cover" source={item.image} />
-                                    <View 
-                                        style={{ 
+                                    <View
+                                        style={{
                                             position: 'absolute',
                                             bottom: 10,
                                             backgroundColor: 'rgba(0, 0, 0, 0.7)', // Semi-transparent background for better text visibility
@@ -104,8 +104,8 @@ class Home extends Component {
                                             paddingHorizontal: 10,
                                             borderRadius: 5,
                                         }}>
-                                        <Text 
-                                            style={{ 
+                                        <Text
+                                            style={{
                                                 color: '#fff',
                                                 fontSize: 16,
                                                 fontWeight: 'bold',
