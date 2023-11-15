@@ -59,7 +59,7 @@ class Home2 extends Component {
                         )} />
                 </View>
                 <View style={{ marginHorizontal: 20, marginTop: 15 }}>
-                    <Text style={{ fontWeight: 'bold', marginTop: 30, marginBottom: 30 }}>Cameras</Text>
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', marginTop: 30, marginBottom: 30 }}>Baju</Text>
                 </View>
                 <View>
                     <FlatList
@@ -88,7 +88,7 @@ class Home2 extends Component {
                 </View>
 
                 <View style={{ marginHorizontal: 20, marginTop: 20, flex: 1 }}>
-                    <Text style={{ fontWeight: 'bold', marginTop: 15, marginBottom: 20 }}>Cameras</Text>
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', marginTop: 15, marginBottom: 20 }}>Celana</Text>
                 </View>
                 <View>
                     <FlatList

@@ -32,13 +32,19 @@ function App() {
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="home" color={color} size={size} />
           ),
-          tabBarBadge: 3,
+          // tabBarBadge: 3,
         }} />
-        <Tab.Screen name="Home2" component={Home2} />
+        <Tab.Screen name="Home2" component={Home2} options={{
+          tabBarLabel: 'Shopping',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="shopping" color={color} size={size} />
+          ),
+          // tabBarBadge: 3,
+        }} />
         <Tab.Screen name="About" component={About} options={{
           tabBarLabel: 'About',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="help" color={color} size={size} />
+            <MaterialCommunityIcons name="help-circle" color={color} size={size} />
           ),
         }} />
       </Tab.Navigator>

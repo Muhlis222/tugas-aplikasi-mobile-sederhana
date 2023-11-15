@@ -34,7 +34,7 @@ class Home extends Component {
                     <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#4a90e2' }}>Moh Muhlis</Text>
 
                     <View>
-                        <Text style={{ fontSize: 20, fontWeight: 'bold', marginTop: 30, marginBottom: 20 }}>Batik</Text>
+                        <Text style={{ fontSize: 20, fontWeight: 'bold', marginTop: 30, marginBottom: 20 }}>Rekomendasi</Text>
 
                         <FlatList
                             data={this.state.data}
@@ -119,9 +119,48 @@ class Home extends Component {
                         />
                     </View>
 
-                    <TouchableOpacity style={{ justifyContent: 'center', alignItems: 'flex-end' }} onPress={() => this.props.navigation.navigate('Home2')}>
-                        <Text style={{ fontSize: 15, fontWeight: "bold", marginBottom: 20, margin: 15 }}>Move To Halaman 2</Text>
-                    </TouchableOpacity>
+                    <View>
+                        <Text style={{ fontSize: 20, fontWeight: 'bold', marginTop: 30, marginBottom: 20 }}>Batik</Text>
+
+                        <FlatList
+                            data={this.state.data}
+                            renderItem={this.renderItem}
+                            keyExtractor={(item) => item.id}
+                            horizontal={true}
+                            renderItem={({ item }) => (
+                                <TouchableOpacity
+                                    style={{
+                                        backgroundColor: '#ffff',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        marginLeft: 10,
+                                        elevation: 10,
+                                        borderRadius: 10
+                                    }}>
+                                    <Image style={{ width: 200, height: 200, borderRadius: 10 }} resizeMode="cover" source={item.image} />
+                                    <View
+                                        style={{
+                                            position: 'absolute',
+                                            bottom: 10,
+                                            backgroundColor: 'rgba(0, 0, 0, 0.7)', // Semi-transparent background for better text visibility
+                                            paddingVertical: 5,
+                                            paddingHorizontal: 10,
+                                            borderRadius: 5,
+                                        }}>
+                                        <Text
+                                            style={{
+                                                color: '#fff',
+                                                fontSize: 16,
+                                                fontWeight: 'bold',
+                                            }}
+                                        >
+                                            Your Text Here
+                                        </Text>
+                                    </View>
+                                </TouchableOpacity>
+                            )}
+                        />
+                    </View>
 
                 </View>
 

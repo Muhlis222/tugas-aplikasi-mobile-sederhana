@@ -15,8 +15,8 @@ class About extends Component {
                     justifyContent: 'center',
                     alignItems: 'center',
                 }}>
-                <Text>APLIKASI INI MASIH, </Text>
-                <Text>DALAM MODE WEY !! </Text>
+                <Text>APLIKASI INI MASIH </Text>
+                <Text>DALAM MODE PENGEMBANGAN </Text>
             </View>
         );
     }
